@@ -1,8 +1,8 @@
 ## About
 
-This `.NET Framework 4.0` app and library demonstrates the use of `MSXML2.XMLHTTP60` from `msxml6.dll` to make HTTPS TLS 1.2 calls on Windows XP SP3 (POSReady2009).
+This `.NET Framework 4.0` HTTP client demonstrates the use of `MSXML2.XMLHTTP60` from `msxml6.dll` to make HTTPS TLS 1.2 calls on Windows XP SP3 (POSReady2009).
 
-`LHC.App` references `LHC.Library`, which exposes the following method:
+An example `LHC.App` references `LHC.Library`, which exposes the following method:
 
 
 ```C#
