@@ -10,31 +10,39 @@ namespace LegacyHttpClient.Library.HttpClient
 {
     public class LegacyHttpClient
     {
-        public async Task<LegacyHttpResponse> Send(string method, string url, HttpContent content)
+        public async Task<LegacyHttpResponse> Send(string method, string url, HttpContent content = null)
         {
-            if (String.IsNullOrEmpty(method) || String.IsNullOrEmpty(url) || content == null)
+            if (String.IsNullOrEmpty(method) || String.IsNullOrEmpty(url))
             {
                 throw new Exception("Invalid parameters.");
             }
 
             var tsc = new TaskCompletionSource<LegacyHttpResponse>();
 
-            var raw = await content.ReadAsByteArrayAsync();
-            if (raw.Length > 0)
+            var req = new XMLHTTP60();
+            req.onreadystatechange = new OnReadyStateChange(req, new EventHandler<OnReadyStateChangeEventArgs>(OnReadyStateChange), tsc);
+            req.open(method, url, true);
+
+            if (content != null)
             {
-                var req = new XMLHTTP60();
-                req.onreadystatechange = new OnReadyStateChange(req, new EventHandler<OnReadyStateChangeEventArgs>(OnReadyStateChange), tsc);
-                req.open(method, url, true);
                 req.setRequestHeader("Content-Type", content.Headers.ContentType.ToString());
                 if (content.Headers.ContentLength != null)
                 {
                     req.setRequestHeader("Content-Length", content.Headers.ContentLength.ToString());
                 }
-                req.send(raw);
+                var raw = await content.ReadAsByteArrayAsync();
+                if (raw.Length > 0)
+                {
+                    req.send(raw);
+                }
+                else
+                {
+                    throw new Exception("No bytes found.");
+                }
             }
             else
             {
-                throw new Exception("No bytes found.");
+                req.send();
             }
 
             return await tsc.Task;
