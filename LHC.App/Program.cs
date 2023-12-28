@@ -10,7 +10,7 @@ namespace LHC.App
     class Program
     {
         private static LegacyHttpClient _client;
-        static async Task Main()
+        private static async Task Main()
         {
             _client = new LegacyHttpClient();
 
@@ -40,7 +40,6 @@ namespace LHC.App
             Console.WriteLine("***");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
-
         }
     }
 }
