@@ -15,7 +15,7 @@ namespace LHC.App
             _client = new LegacyHttpClient();
 
             // GET
-            var getUrl = "https://httpbin.org/ip";
+            var getUrl = "https://www.howsmyssl.com/a/check";
             Console.WriteLine($"GET {getUrl}");
             var getResult = await _client.Send("GET", getUrl);
             Console.WriteLine($"{getUrl} returned {getResult.StatusCode}");
