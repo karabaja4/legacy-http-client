@@ -1,17 +1,15 @@
 ## About
 
-Legacy `.NET Framework 4.0` HTTP client for Windows XP SP3 (POSReady2009) with TLS 1.2 support.
+This `.NET Framework 4.0` app and library demonstrates the use of `MSXML2.XMLHTTP60` from `msxml6.dll` to make HTTPS TLS 1.2 calls on Windows XP SP3 (POSReady2009).
 
-This project utilizes `MSXML2.XMLHTTP60` to make HTTPS TLS 1.2 calls on Windows XP SP3 POSReady2009.
-
-`LHC.App` demonstrates the usage of `LHC.Library`, which exposes the following method:
+`LHC.App` references `LHC.Library`, which exposes the following method:
 
 
 ```C#
 Task<LegacyHttpResponse> Send(string method, string url, HttpContent content = null)
 ```
 
-The DLL that is referenced is `msxml6.dll`, but it should work just as well with `msxml3.dll` and `MSXML2.XMLHTTP`.
+The DLL that is referenced by `LHC.Library` is `msxml6.dll`, but it should work just as well with `msxml3.dll` and `MSXML2.XMLHTTP`.
 
 The library depends on the following Nuget packages:
 
