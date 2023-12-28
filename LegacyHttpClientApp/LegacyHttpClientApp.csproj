@@ -81,14 +81,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LegacyHttpClient.Library\LegacyHttpClient.Library.csproj">
-      <Project>{7e5f8cfb-898b-46f3-8a4c-10a8d7422f51}</Project>
-      <Name>LegacyHttpClient.Library</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LegacyHttpClientLibrary\LegacyHttpClientLibrary.csproj">
+      <Project>{7e5f8cfb-898b-46f3-8a4c-10a8d7422f51}</Project>
+      <Name>LegacyHttpClientLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

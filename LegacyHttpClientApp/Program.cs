@@ -3,15 +3,16 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using LegacyHttpClientLibrary.HttpClient;
 
-namespace LegacyHttpClient.App
+namespace LegacyHttpClientApp
 {
     class Program
     {
-        private static Library.HttpClient.LegacyHttpClient _client;
-        static async Task Main(string[] args)
+        private static LegacyHttpClient _client;
+        static async Task Main()
         {
-            _client = new Library.HttpClient.LegacyHttpClient();
+            _client = new LegacyHttpClient();
 
             // GET
             var getUrl = "https://httpbin.org/ip";

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LegacyHttpClient.Library")]
+[assembly: AssemblyTitle("LegacyHttpClientApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LegacyHttpClient.Library")]
+[assembly: AssemblyProduct("LegacyHttpClientApp")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7e5f8cfb-898b-46f3-8a4c-10a8d7422f51")]
+[assembly: Guid("9536df8d-2d85-4ee7-91ec-d59c7293f2a4")]
 
 // Version information for an assembly consists of the following four values:
 //

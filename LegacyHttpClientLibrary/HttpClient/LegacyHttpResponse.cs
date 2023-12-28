@@ -1,5 +1,5 @@
 ﻿
-namespace LegacyHttpClient.Library.HttpClient
+namespace LegacyHttpClientLibrary.HttpClient
 {
     public class LegacyHttpResponse
     {

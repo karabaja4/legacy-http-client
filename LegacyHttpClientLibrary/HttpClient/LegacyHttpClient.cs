@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 // MSXML2 allows TLS 1.2 on Windows XP
 // add reference to C:\Windows\System32\msxml6.dll
 
-namespace LegacyHttpClient.Library.HttpClient
+namespace LegacyHttpClientLibrary.HttpClient
 {
     public class LegacyHttpClient
     {

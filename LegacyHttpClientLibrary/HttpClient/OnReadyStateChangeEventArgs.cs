@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace LegacyHttpClient.Library.HttpClient
+namespace LegacyHttpClientLibrary.HttpClient
 {
     public class OnReadyStateChangeEventArgs: EventArgs
     {
