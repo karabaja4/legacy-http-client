@@ -25,14 +25,14 @@ namespace LHC.Library.HttpClient
 
             if (content != null)
             {
-                req.setRequestHeader("Content-Type", content.Headers.ContentType.ToString());
-                if (content.Headers.ContentLength != null)
-                {
-                    req.setRequestHeader("Content-Length", content.Headers.ContentLength.ToString());
-                }
                 var raw = await content.ReadAsByteArrayAsync();
                 if (raw.Length > 0)
                 {
+                    req.setRequestHeader("Content-Type", content.Headers.ContentType.ToString());
+                    if (content.Headers.ContentLength != null)
+                    {
+                        req.setRequestHeader("Content-Length", content.Headers.ContentLength.ToString());
+                    }
                     req.send(raw);
                 }
                 else
