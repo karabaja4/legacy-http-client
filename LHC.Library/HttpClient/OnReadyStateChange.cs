@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace LegacyHttpClientLibrary.HttpClient
+namespace LHC.Library.HttpClient
 {
     public class OnReadyStateChange : IReflect
     {

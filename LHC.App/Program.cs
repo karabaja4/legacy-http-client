@@ -3,9 +3,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using LegacyHttpClientLibrary.HttpClient;
+using LHC.Library.HttpClient;
 
-namespace LegacyHttpClientApp
+namespace LHC.App
 {
     class Program
     {

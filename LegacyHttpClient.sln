@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34301.259
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyHttpClientApp", "LegacyHttpClientApp\LegacyHttpClientApp.csproj", "{9536DF8D-2D85-4EE7-91EC-D59C7293F2A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHC.App", "LHC.App\LHC.App.csproj", "{9536DF8D-2D85-4EE7-91EC-D59C7293F2A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyHttpClientLibrary", "LegacyHttpClientLibrary\LegacyHttpClientLibrary.csproj", "{7E5F8CFB-898B-46F3-8A4C-10A8D7422F51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHC.Library", "LHC.Library\LHC.Library.csproj", "{7E5F8CFB-898B-46F3-8A4C-10A8D7422F51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

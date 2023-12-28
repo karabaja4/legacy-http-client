@@ -85,9 +85,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LegacyHttpClientLibrary\LegacyHttpClientLibrary.csproj">
+    <ProjectReference Include="..\LHC.Library\LHC.Library.csproj">
       <Project>{7e5f8cfb-898b-46f3-8a4c-10a8d7422f51}</Project>
-      <Name>LegacyHttpClientLibrary</Name>
+      <Name>LHC.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
