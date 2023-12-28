@@ -29,9 +29,12 @@ namespace LegacyHttpClient.App
                 Input = "hello world"
             });
             Console.WriteLine($"POST {postUrl}");
-            var postResult = await _client.Send("POST", postUrl, new StringContent(postJson, Encoding.UTF8, "application/json"));
-            Console.WriteLine($"{postUrl} returned {postResult.StatusCode}");
-            Console.WriteLine(postResult.ResponseText);
+            using (var postContent = new StringContent(postJson, Encoding.UTF8, "application/json"))
+            {
+                var postResult = await _client.Send("POST", postUrl, postContent);
+                Console.WriteLine($"{postUrl} returned {postResult.StatusCode}");
+                Console.WriteLine(postResult.ResponseText);
+            }
 
             Console.WriteLine("***");
             Console.ReadKey();
