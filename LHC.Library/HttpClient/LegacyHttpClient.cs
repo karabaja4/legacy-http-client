@@ -17,10 +17,10 @@ namespace LHC.Library.HttpClient
                 throw new Exception("Invalid parameters.");
             }
 
-            var tsc = new TaskCompletionSource<LegacyHttpResponse>();
+            var tcs = new TaskCompletionSource<LegacyHttpResponse>();
 
             var req = new XMLHTTP60();
-            req.onreadystatechange = new OnReadyStateChange(req, new EventHandler<OnReadyStateChangeEventArgs>(OnReadyStateChange), tsc);
+            req.onreadystatechange = new OnReadyStateChange(req, new EventHandler<OnReadyStateChangeEventArgs>(OnReadyStateChange), tcs);
             req.open(method, url, true);
 
             if (content != null)
@@ -45,7 +45,7 @@ namespace LHC.Library.HttpClient
                 req.send();
             }
 
-            return await tsc.Task;
+            return await tcs.Task;
         }
 
         private void OnReadyStateChange(object sender, OnReadyStateChangeEventArgs e)

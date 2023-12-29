@@ -11,14 +11,14 @@ namespace LHC.Library.HttpClient
         private volatile IReflect m_reflect;
         private volatile EventHandler<OnReadyStateChangeEventArgs> m_event;
 
-        private TaskCompletionSource<LegacyHttpResponse> _tsc;
+        private TaskCompletionSource<LegacyHttpResponse> _tcs;
 
-        public OnReadyStateChange(object sender, EventHandler<OnReadyStateChangeEventArgs> eventHandler, TaskCompletionSource<LegacyHttpResponse> tsc)
+        public OnReadyStateChange(object sender, EventHandler<OnReadyStateChangeEventArgs> eventHandler, TaskCompletionSource<LegacyHttpResponse> tcs)
         {
             this.m_sender = sender;
             this.m_event = eventHandler;
             this.m_reflect = typeof(OnReadyStateChange);
-            this._tsc = tsc;
+            this._tcs = tcs;
         }
 
         Type IReflect.UnderlyingSystemType
@@ -84,7 +84,7 @@ namespace LHC.Library.HttpClient
         {
             if (name == "[DISPID=0]" && this.m_event != null)
             {
-                this.m_event(this.m_sender, new OnReadyStateChangeEventArgs() { HttpRequestCompleteSource = _tsc });
+                this.m_event(this.m_sender, new OnReadyStateChangeEventArgs() { HttpRequestCompleteSource = _tcs });
             }
             return this.m_reflect.InvokeMember(name, invokeAttr, binder, target, args, modifiers, culture, namedParameters);
         }
