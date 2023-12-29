@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LHC.Library.HttpClient
 {
-    public class OnReadyStateChange : IReflect
+    internal class OnReadyStateChange : IReflect
     {
         private volatile object m_sender;
         private volatile IReflect m_reflect;
