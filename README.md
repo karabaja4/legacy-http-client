@@ -25,6 +25,20 @@ The library depends on the following Nuget packages:
 
 Install all updates from https://legacyupdate.net for Windows XP SP3 to enable TLS 1.2 support.
 
+## SSL Ciphers
+
+The following ciphers seem to still work:
+
+| IANA name | nginx (ssl_ciphers) |
+| ----------- | ----------- |
+| TLS_RSA_WITH_AES_256_CBC_SHA256 | AES256-SHA256 |
+| TLS_RSA_WITH_AES_128_CBC_SHA256 | AES128-SHA256 |
+| TLS_RSA_WITH_AES_256_CBC_SHA | AES256-SHA |
+| TLS_RSA_WITH_AES_128_CBC_SHA | AES128-SHA |
+| TLS_RSA_WITH_3DES_EDE_CBC_SHA | DES-CBC3-SHA |
+
+⚠️ Warning: they are all **WEAK** ciphers.
+
 ## License
 
 Released under MIT license.
