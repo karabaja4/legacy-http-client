@@ -35,7 +35,6 @@ The following ciphers seem to still work:
 | TLS_RSA_WITH_AES_128_CBC_SHA256 | AES128-SHA256 |
 | TLS_RSA_WITH_AES_256_CBC_SHA | AES256-SHA |
 | TLS_RSA_WITH_AES_128_CBC_SHA | AES128-SHA |
-| TLS_RSA_WITH_3DES_EDE_CBC_SHA | DES-CBC3-SHA |
 
 ⚠️ Warning: they are all **WEAK** ciphers.
 
