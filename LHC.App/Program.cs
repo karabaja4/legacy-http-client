@@ -15,11 +15,11 @@ namespace LHC.App
             _client = new LegacyHttpClient();
 
             // GET
-            var getUrl = "https://www.howsmyssl.com/a/check";
+            var getUrl = "https://github.com";
             Console.WriteLine($"GET {getUrl}");
             var getResult = await _client.Send("GET", getUrl);
             Console.WriteLine($"{getUrl} returned {getResult.StatusCode}");
-            Console.WriteLine(getResult.ResponseText);
+            Console.WriteLine(FormatResponse(getResult.ResponseText));
 
             Console.WriteLine("***");
 
@@ -34,12 +34,21 @@ namespace LHC.App
             {
                 var postResult = await _client.Send("POST", postUrl, postContent);
                 Console.WriteLine($"{postUrl} returned {postResult.StatusCode}");
-                Console.WriteLine(postResult.ResponseText);
+                Console.WriteLine(FormatResponse(postResult.ResponseText));
             }
 
             Console.WriteLine("***");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
+        }
+
+        private static string FormatResponse(string text)
+        {
+            if (text.Length > 1000)
+            {
+                return text.Substring(0, 1000) + "...";
+            }
+            return text;
         }
     }
 }

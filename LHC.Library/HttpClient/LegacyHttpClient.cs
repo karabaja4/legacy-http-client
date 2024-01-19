@@ -55,7 +55,7 @@ namespace LHC.Library.HttpClient
             {
                 e.HttpRequestCompleteSource.SetResult(new LegacyHttpResponse
                 {
-                    StatusCode = req.status,
+                    StatusCode = req.status == 1223 ? 204 : req.status,
                     ResponseText = req.responseText
                 });
             }
